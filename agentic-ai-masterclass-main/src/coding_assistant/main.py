@@ -7,6 +7,8 @@ from pydantic_ai.models.openrouter import OpenRouterModel
 from rich.console import Console
 from rich.markdown import Markdown
 
+import typer
+
 from coding_assistant.capabilities.file_operations import FileOperations
 from coding_assistant.capabilities.reasoning_effort import ReasoningEffort
 from coding_assistant.capabilities.skills import Skills
@@ -57,6 +59,10 @@ async def run_agent() -> None:
         #    Tip: use console.print(Markdown(result.output))
 
 
+app = typer.Typer()
+
+
+@app.command()
 def main() -> None:
     try:
         asyncio.run(run_agent())
@@ -65,4 +71,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    app()

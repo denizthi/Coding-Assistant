@@ -11,10 +11,11 @@ dependencies = [
     "python-frontmatter>=1.1.0",
     "pyyaml>=6.0.3",
     "rich>=15.0.0",
+    "typer"
 ]
 
 [project.scripts]
-coding-assistant = "coding_assistant.main:main"
+coding-assistant = "coding_assistant.main:app"
 
 [build-system]
 requires = ["uv_build>=0.10.2,<0.11.0"]
